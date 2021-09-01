@@ -1,0 +1,52 @@
+
+.titleApp{
+    font-size: 3.5rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.spinner-border{
+    width: 3rem;
+    height: 3rem;
+}
+
+.btn-outline-info:hover{
+    color: #fff;
+}
+
+select{
+    max-width: 10rem;
+}
+
+.btn-info:hover{
+    background-color: rgb(22, 145, 182);
+    border-color: rgb(22, 145, 182);;
+}
+
+#btnSearch{
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.5s;
+}
+
+#btnSearch:hover{
+    transform: scale(1.05);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+td, th{
+    vertical-align: middle;
+}
+
+.notHidden{
+    display: block !important;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+
+@media screen and (max-width: 35em){
+
+    .title{
+        justify-content: center !important;
+    }
+
+}
