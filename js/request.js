@@ -12,9 +12,13 @@ function resultRequest(displaySearch){
     for(i in displaySearch.recordings){
 
         nombre ++;
-        artiste = displaySearch.recordings[i]["artist-credit"][0].name;
         titre = displaySearch.recordings[i].title;
         idArtist = displaySearch.recordings[i].id;
+
+        let artiste = [];
+        for(h in displaySearch.recordings[i]["artist-credit"]){
+            artiste.push(displaySearch.recordings[i]["artist-credit"][h].name)
+        }
 
         if(displaySearch.recordings[i].length === undefined){
             length = "Length - Not results";
@@ -33,12 +37,13 @@ function resultRequest(displaySearch){
 
         // si release est undefined, alb = inconnu
         let idCover = [];
+        let alb = [];
         if(displaySearch.recordings[i]["releases"] === undefined){
             alb = 'INCONNU';
         }else{
-            alb = displaySearch.recordings[i]["releases"][0].title;
             for(j in displaySearch.recordings[i]["releases"]){
-                idCover.push(displaySearch.recordings[i]["releases"][j].id)
+                idCover.push(displaySearch.recordings[i]["releases"][j].id);
+                alb.push(displaySearch.recordings[i]["releases"][j].title);
             }
         }
 
