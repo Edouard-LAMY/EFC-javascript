@@ -65,7 +65,7 @@ function resultRequest(displaySearch){
     }
 
     nrbResult.hidden = false; // nmbre de resultat s'affiche
-    nrbResult.textContent = "Results : " + (parseInt(displaySearch.count)-1);
+    nrbResult.textContent = "Results : " + parseInt(displaySearch.count);
 
 }
 
