@@ -35,6 +35,7 @@ select{
 
 td, th{
     vertical-align: middle;
+    max-width: 50rem;
 }
 
 .notHidden{
